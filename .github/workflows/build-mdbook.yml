@@ -16,11 +16,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: rustup self update
-    - run: rustup default stable
     - run: rustup update
-    - run: cargo install mdbook --vers  0.4.25
+    - run: rustup default stable
     - run: cargo -V
     - run: rustc -V
+    - run: cargo install mdbook --vers  0.4.25
     - run: mdbook -V
     - run: mdbook test
     - run: mdbook build --dest-dir docs
